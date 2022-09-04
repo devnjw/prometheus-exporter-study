@@ -35,10 +35,10 @@ func main() {
 
 	http.Handle("/metrics", handler)
 	log.Printf("Starting to listen on :%d", 9090)
-	// err := http.ListenAndServe(fmt.Sprintf(":%d", 9090), nil)
-	// if err != nil {
-	// 	log.Println("Failed to Listen And Serve")
-	// }
+	err := http.ListenAndServe(fmt.Sprintf(":%d", 9090), nil)
+	if err != nil {
+		log.Println("Failed to Listen And Serve")
+	}
 }
 
 func dockerPs() {
